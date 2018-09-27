@@ -6,3 +6,20 @@ $(document).ajaxStart(function(){
 $(document).ajaxStop(function(){
   NProgress.done();
 })
+
+//二级菜单切换
+$('.lt_aside .category').click(function(){
+  $('.lt_aside .child').stop().slideToggle();
+})
+
+//左侧菜单栏切换
+$('.icon_menu').click(function(){
+  $('.lt_aside').toggleClass('hidemenu');
+  $('.topbar').toggleClass('hidemenu');
+  $('.lt_main').toggleClass('hidemenu');
+})
+
+//点击退出按钮,显示模态框
+$('.icon_logout').click(function(){
+  $('#logoutModal').modal('show');
+})

@@ -10,3 +10,9 @@
 .mt-150{
   margin-top: 150px;
 }
+/* 侧边栏样式 */
+.lt_aside{
+  width: 180px;
+  height: 100%;
+  background-color: #222D32;
+}

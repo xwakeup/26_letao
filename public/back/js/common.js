@@ -23,3 +23,18 @@ $('.icon_menu').click(function(){
 $('.icon_logout').click(function(){
   $('#logoutModal').modal('show');
 })
+
+// 点击退出,退出登录,跳转到登录页
+$('.logoutBtn').click(function(){
+  $.ajax({
+    type:"get",
+    url:"/employee/employeeLogout",
+    dataType:"json",
+    success:function(info){
+      // console.log(info);
+      if(info.success){
+        location.href="login.html"
+      }
+    }
+  })
+})

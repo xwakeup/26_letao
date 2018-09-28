@@ -20,7 +20,7 @@ $(function() {
       },
       dataType: "json",
       success: function( info ) {
-        console.log( info )
+        console.log( info );
 
         // 模板引擎 template( 模板id, 数据对象 );
         var htmlStr = template( "tpl", info );

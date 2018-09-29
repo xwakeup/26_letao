@@ -19,6 +19,9 @@ ul{
   text-align: center;
   vertical-align: middle;
 }
+.mb_20{
+  margin-bottom: 20px;
+}
 
 .body_bg{
   background-color: #222d32;

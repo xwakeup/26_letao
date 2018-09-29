@@ -67,9 +67,32 @@
           <li class="active">分类管理</li>
           <li class="active">二级管理</li>
       </ol>
+      <!-- 主体内容部分 -->
+      <div class="lt_content">
+          <button class="btn btn-default mb_20" id="addBtn">添加分类</button>
+          <!-- 表格 -->
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th width="10%">序号</th>
+                <th width="30%">一级分类名称</th>
+                <th width="30%">二级分类名称</th>
+                <th width="30%">二级分类LOGO</th>
+              </tr>
+            </thead>
+            <tbody>
+             <!-- 挖个坑 -->
+            </tbody>
+          </table>
+ 
+          <!-- 准备一个分页容器,要求是ul -->
+          <div class="text-right">
+            <ul id="paginator"></ul>
+          </div>
+      </div>
     </div>
   </div>
-  <!-- 模态框 -->
+  <!-- 退出模态框 -->
   <div class="modal fade" tabindex="-1"  id="logoutModal">
       <div class="modal-dialog modal-sm" >
         <div class="modal-content">
@@ -88,11 +111,27 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
+    <!-- 模板 -->
+    <script type="text/html" id="secondTmp">
+      {{each rows v i}}
+      <tr>
+        <td>{{i+1+(page-1)*size}}</td>
+        <td>{{v.categoryName}}</td>
+        <td>{{v.brandName}}</td>
+        <td><img src="{{v.brandLogo}}" height="50" alt=""></td>
+      </tr> 
+      {{/each}}
+    </script>
+
 
   <script src="./lib/jquery/jquery.js"></script>
   <script src="./lib/bootstrap/js/bootstrap.js"></script>
   <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+  <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
   <script src="./lib/nprogress/nprogress.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/checkout.js"></script>
   <script src="./js/common.js"></script>
+  <script src="./js/second.js"></script>
 </body>
 </html>
